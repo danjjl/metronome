@@ -1,0 +1,15 @@
+{
+    "name": "metronome.danjjl",
+    "description": "Early version of a metronome app",
+    "architecture": "@CLICK_ARCH@",
+    "title": "metronome",
+    "hooks": {
+        "metronome": {
+            "apparmor": "metronome/metronome.apparmor",
+            "desktop": "metronome/metronome.desktop"
+        }
+    },
+    "version": "0.1",
+    "maintainer": "Jonathan Dan <danjjl@hotmail.com>",
+    "framework": "ubuntu-sdk-15.04"
+}

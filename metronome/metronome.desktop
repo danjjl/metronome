@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=metronome
+Exec=qmlscene $@ metronome/Main.qml
+Icon=metronome/metronome.png
+Terminal=false
+Type=Application
+X-Ubuntu-Touch=true
+
