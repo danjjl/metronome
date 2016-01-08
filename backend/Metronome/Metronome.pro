@@ -13,8 +13,8 @@ SOURCES += \
     metronome.cpp
 
 HEADERS += \
-    metronomeplugin.h \
-    metronome.h
+    metronome.h \
+    metronomeplugin.h
 
 OTHER_FILES = qmldir
 

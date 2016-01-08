@@ -3,52 +3,73 @@ import QtMultimedia 5.4
 import Metronome 1.0
 
 Item {
-	property var tempo: 60.0
+    property int tempo: 60
 
 	function play() {
 		metronomeLine.rotation = 300
-		rotateAnimation.start()
-		soundBeat.play()
+        timer.start();
+        timer.running = true;
 
 	}
 
 	function stop() {
-		rotateAnimation.stop()
-		soundBeat.stop()
+        rotateLeft.stop(); rotateRight.stop();
+        timer.stop();
+        timer.num = 0;
+        timer.running = false;
 
 	}
 
 	function playStop() {
-		if(rotateAnimation.running)
-			stop()
+        if(timer.running)
+            stop();
 		else
-			play()
+            play();
 	}
 
-	function updateTempo(nTempo)
-	{
-		tempo = nTempo
-		makeBeat.makeBeat(tempo)
-        soundBeat.source = "/home/phablet/.local/share/metronome.danjjl/beat.wav"
-		rotateRight.duration = 1000.0*60.0/tempo
-		rotateLeft.duration = 1000.0*60.0/tempo
-		playStop(); playStop()
+    function updateTempo(nTempo) {
+        tempo = nTempo
+        timer.interval = 1000.0*60.0/tempo;
+        rotateRight.duration = 1000.0*60.0/tempo;
+        rotateLeft.duration = 1000.0*60.0/tempo;
+        playStop(); playStop();
 	}
+
+    function playBeat() {
+        if(timer.num == 0){
+            rotateLeft.stop();
+            rotateRight.start();
+        }
+        else{
+            rotateRight.stop();
+            rotateLeft.start();
+        }
+        timer.num = ~timer.num;
+        beat.play();
+
+    }
 
     Metronome {
-		id: makeBeat
+        id: timer
+        interval: 1000.0*60.0/tempo;
+        singleShot: false
+        property bool running: false;
+        property int num: 0
+
+        onTimeout:{
+            playBeat();
+        }
 	}
 
-	Audio {
-		id: soundBeat
+    SoundEffect {
+        id: beat
         source: "beat.wav"
-		loops: SoundEffect.Infinite
 	}
 
 	Rectangle {
 		id: metronomeLine
 
-		property var angle: 300
+        property int angle: 300
 
 		color: "black"
 		width: units.gu(1)
@@ -61,25 +82,20 @@ Item {
 		rotation: 300
 		smooth: true
 
-		SequentialAnimation {
-			id: rotateAnimation
-			loops: Animation.Infinite
-
-			RotationAnimation {
-				id: rotateRight
-				target: metronomeLine
-				duration: 1000.0*60.0/tempo
-				direction: RotationAnimation.Clockwise
-				to: 60
-			}
-			RotationAnimation {
-				id: rotateLeft
-				target: metronomeLine
-				duration: 1000.0*60.0/tempo
-				direction: RotationAnimation.Counterclockwise
-				to: 300
-			}
-		}
+        RotationAnimation {
+            id: rotateRight
+            target: metronomeLine
+            duration: 1000.0*60.0/tempo
+            direction: RotationAnimation.Clockwise
+            to: 60
+        }
+        RotationAnimation {
+            id: rotateLeft
+            target: metronomeLine
+            duration: 1000.0*60.0/tempo
+            direction: RotationAnimation.Counterclockwise
+            to: 300
+        }
 	}
 
 	anchors {

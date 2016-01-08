@@ -11,5 +11,5 @@
     },
     "version": "0.1",
     "maintainer": "Jonathan Dan <danjjl@hotmail.com>",
-    "framework": "ubuntu-sdk-15.04"
+    "framework": "ubuntu-sdk-15.04.3"
 }

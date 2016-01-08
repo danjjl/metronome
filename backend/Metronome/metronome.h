@@ -1,36 +1,20 @@
 #ifndef METRONOME_H
 #define METRONOME_H
 
-#include <stdio.h>
-#include <stdlib.h>
-
+#include <QTimer>
 #include <QObject>
 
-// WAVE PCM soundfile format
-typedef struct header_file{
-	char chunk_id[4];
-	int chunk_size;
-	char format[4];
-	char subchunk1_id[4];
-	int subchunk1_size;
-	short int audio_format;
-	short int num_channels;
-	int sample_rate;
-	int byte_rate;
-	short int block_align;
-	short int bits_per_sample;
-	char subchunk2_id[4];
-	int subchunk2_size;			// subchunk2_size denotes the number of samples.
-} header;
-
-typedef struct header_file* header_p;
-
-
-class Metronome : public QObject{
-	Q_OBJECT
+class Metronome : public QTimer{
+    Q_OBJECT
+    Q_PROPERTY( int interval READ interval WRITE setInterval NOTIFY intervalChanged )   // add notify
+    Q_PROPERTY( bool active READ isActive NOTIFY activeChanged )   // add notify
 
 public:
-	Q_INVOKABLE void makeBeat(const qint16 &tempo);
+    explicit Metronome(QObject *parent = 0);
+
+Q_SIGNALS:
+    void intervalChanged();
+    void activeChanged();
 };
 
 #endif

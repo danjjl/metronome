@@ -21,7 +21,7 @@ Rectangle {
 		anchors.horizontalCenter: parent.horizontalCenter
 		model: ListModel {
 			Component.onCompleted: {
-				for (var i = 30; i <= 240; i++) {
+                for (var i = 30; i <= 240; i++) {
 						append({"tempo": i})
 					}
 				test.positionViewAtIndex(30, ListView.Center)
