@@ -1,26 +1,29 @@
 import QtQuick 2.4
-import Ubuntu.Components 1.2
-/*!
-    \brief MainView with a Label and Button elements.
-*/
+import Ubuntu.Components 1.3
 
 MainView {
-    // objectName for functional testing purposes (autopilot-qt5)
-    objectName: "mainView"
+    id: mainView
 
-    // Note! applicationName needs to match the "name" field of the click manifest
+    property int rhythmIndex: 0
+
     applicationName: "metronome.danjjl"
+    width: units.gu(42); height: units.gu(70)
+    StateSaver.properties: "rhythmIndex"
 
-    /*
-     This property enables the application to change orientation
-     when the device is rotated. The default is false.
-    */
-    //automaticOrientation: true
+    PageStack {
+        id: pageStack
 
-    // Removes the old toolbar and enables new features of the new header.
-    width: units.gu(42)
-    height: units.gu(70)
+        Component.onCompleted: {
+            push(metronomePage)
+            rhythmPage.initializeRhythm(mainView.rhythmIndex)
+        }
 
-    MainPage{}
+        MainPage {
+            id: metronomePage
+        }
+
+        RhythmPage {
+            id: rhythmPage
+        }
+    }
 }
-

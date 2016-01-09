@@ -34,3 +34,7 @@ config_files.files += $${CONF_FILES}
 
 INSTALLS+=config_files qml_files extra_files
 
+DISTFILES += \
+    components/RhythmPage.qml \
+    components/Rhythm.qml
+

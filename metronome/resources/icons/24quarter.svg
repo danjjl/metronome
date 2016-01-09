@@ -13,8 +13,8 @@
    height="40"
    id="svg2"
    version="1.1"
-   inkscape:version="0.48.4 r9939"
-   sodipodi:docname="quarter.svg">
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="22quarter.svg">
   <defs
      id="defs4" />
   <sodipodi:namedview
@@ -43,7 +43,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -60,15 +60,34 @@
        sodipodi:cy="19.120556"
        sodipodi:rx="5.2085991"
        sodipodi:ry="3.5355339"
-       d="m 56.568542,19.120556 a 5.2085991,3.5355339 0 1 1 -10.417198,0 5.2085991,3.5355339 0 1 1 10.417198,0 z"
-       transform="matrix(0.9397012,-0.34199659,0.34199659,0.9397012,8.6529524,1043.5853)" />
+       d="m 56.568542,19.120556 a 5.2085991,3.5355339 0 0 1 -5.208599,3.535534 5.2085991,3.5355339 0 0 1 -5.208599,-3.535534 5.2085991,3.5355339 0 0 1 5.208599,-3.535534 5.2085991,3.5355339 0 0 1 5.208599,3.535534 z"
+       transform="matrix(0.9397012,-0.34199659,0.34199659,0.9397012,0.70652414,1042.9603)" />
     <rect
        style="stroke:none"
        id="rect2987"
        width="1.1260842"
        height="22.781229"
-       x="67.290756"
-       y="1020.7336"
+       x="59.344326"
+       y="1020.1086"
+       ry="0.15263741"
+       rx="0.15263741" />
+    <path
+       sodipodi:type="arc"
+       style="stroke-width:1.005;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+       id="path2985-9"
+       sodipodi:cx="51.359943"
+       sodipodi:cy="19.120556"
+       sodipodi:rx="5.2085991"
+       sodipodi:ry="3.5355339"
+       d="m 56.568542,19.120556 a 5.2085991,3.5355339 0 0 1 -5.208599,3.535534 5.2085991,3.5355339 0 0 1 -5.208599,-3.535534 5.2085991,3.5355339 0 0 1 5.208599,-3.535534 5.2085991,3.5355339 0 0 1 5.208599,3.535534 z"
+       transform="matrix(0.9397012,-0.34199659,0.34199659,0.9397012,17.965692,1043.0408)" />
+    <rect
+       style="stroke:none"
+       id="rect2987-9"
+       width="1.1260842"
+       height="22.781229"
+       x="76.603493"
+       y="1020.1891"
        ry="0.15263741"
        rx="0.15263741" />
   </g>

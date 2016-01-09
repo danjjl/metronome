@@ -25,7 +25,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="5.6"
-     inkscape:cx="57.204279"
+     inkscape:cx="25.775708"
      inkscape:cy="8.5075483"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -43,7 +43,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -54,21 +54,40 @@
      transform="translate(0,-1012.3622)">
     <path
        sodipodi:type="arc"
-       style="stroke-width:1.005;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+       style="fill:none;stroke:#000000;stroke-width:1.30499995;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        id="path2985"
        sodipodi:cx="51.359943"
        sodipodi:cy="19.120556"
        sodipodi:rx="5.2085991"
        sodipodi:ry="3.5355339"
        d="m 56.568542,19.120556 a 5.2085991,3.5355339 0 1 1 -10.417198,0 5.2085991,3.5355339 0 1 1 10.417198,0 z"
-       transform="matrix(0.9397012,-0.34199659,0.34199659,0.9397012,8.6529524,1043.5853)" />
+       transform="matrix(0.87696102,-0.34385161,0.31916281,0.94479822,2.1333074,1042.8688)" />
     <rect
        style="stroke:none"
        id="rect2987"
        width="1.1260842"
        height="22.781229"
-       x="67.290756"
-       y="1020.7336"
+       x="57.469326"
+       y="1020.0193"
+       ry="0.15263741"
+       rx="0.15263741" />
+    <path
+       sodipodi:type="arc"
+       style="fill:none;stroke:#000000;stroke-width:1.30499995;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="path2985-8"
+       sodipodi:cx="51.359943"
+       sodipodi:cy="19.120556"
+       sodipodi:rx="5.2085991"
+       sodipodi:ry="3.5355339"
+       d="m 56.568542,19.120556 a 5.2085991,3.5355339 0 1 1 -10.417198,0 5.2085991,3.5355339 0 1 1 10.417198,0 z"
+       transform="matrix(0.87696102,-0.34385161,0.31916281,0.94479822,21.713904,1042.8016)" />
+    <rect
+       style="stroke:none"
+       id="rect2987-7"
+       width="1.1260842"
+       height="22.781229"
+       x="77.049927"
+       y="1019.9521"
        ry="0.15263741"
        rx="0.15263741" />
   </g>

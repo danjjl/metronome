@@ -9,7 +9,7 @@
             "desktop": "metronome/metronome.desktop"
         }
     },
-    "version": "0.1",
+    "version": "0.2",
     "maintainer": "Jonathan Dan <danjjl@hotmail.com>",
     "framework": "ubuntu-sdk-15.04.3"
 }
