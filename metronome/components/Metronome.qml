@@ -36,8 +36,8 @@ Item {
     function updateTempo(nTempo) {
         tempo = nTempo
         timer.interval = 1000.0*60.0/(tempo*listRhythms.get(rhythmIndex).tempoDiv)
-        rotateRight.duration = 1000.0*60.0/tempo
-        rotateLeft.duration = 1000.0*60.0/tempo
+        rotateRight.duration = timer.interval*listRhythms.get(rhythmIndex).number
+        rotateLeft.duration = timer.interval*listRhythms.get(rhythmIndex).number
         playStop(); playStop();
     }
 
