@@ -1,5 +1,6 @@
 import QtQuick 2.4
 import QtMultimedia 5.4
+import QtSystemInfo 5.0
 import Ubuntu.Components 1.3
 import Metronome 1.0
 
@@ -15,7 +16,7 @@ Item {
         metronomeLine.rotation = 300
         timer.start()
         timer.running = true
-
+        screenSaver.screenSaverEnabled = false
     }
 
     function stop() {
@@ -23,7 +24,7 @@ Item {
         timer.stop()
         timer.index = 0
         timer.running = false
-
+        screenSaver.screenSaverEnabled = true
     }
 
     function playStop() {
@@ -37,7 +38,7 @@ Item {
         tempo = nTempo
         timer.interval = 1000.0*60.0/(tempo*listRhythms.get(rhythmIndex).tempoDiv)
         rotateRight.duration = timer.interval*listRhythms.get(rhythmIndex).number
-        rotateLeft.duration = timer.interval*listRhythms.get(rhythmIndex).number
+        rotateLeft.duration = rotateRight.duration
         playStop(); playStop();
     }
 
@@ -145,5 +146,10 @@ Item {
             direction: RotationAnimation.Counterclockwise
             to: 300
         }
+    }
+
+    ScreenSaver {
+        id: screenSaver
+        screenSaverEnabled: true
     }
 }
