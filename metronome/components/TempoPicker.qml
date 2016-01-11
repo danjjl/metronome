@@ -5,6 +5,13 @@ Rectangle {
 
     width: units.gu(22); height: units.gu(6)
 
+    function initializeTempo(tempo){
+        roulette.positionViewAtIndex(tempo - 30, ListView.Center)
+        roulette.highlightMoveDuration = 0
+        roulette.currentIndex = tempo - 30
+        roulette.highlightMoveDuration = -1
+    }
+
     Component {
         id: contactDelegate
 
@@ -48,6 +55,5 @@ Rectangle {
         preferredHighlightEnd: units.gu(7) + units.gu(2)
         highlightRangeMode: ListView.StrictlyEnforceRange
         onMovementEnded: metronome.updateTempo(currentIndex + 30)
-        StateSaver.properties: "currentIndex"
     }
 }

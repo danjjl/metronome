@@ -6,9 +6,24 @@ Page {
     id: mainPage
 
     function updateRhythm(img, rhythmIndex) {
-        noteIcon.updateNoteIcon(img)
+        icon.iconSource = img;
         metronome.updateRhythm(rhythmIndex)
     }
+
+    function initializeMetronome(tempo,rhythmIndex){
+        metronome.updateTempo(tempo)
+        metronome.updateRhythm(rhythmIndex)
+        tempoPicker.initializeTempo(tempo)
+    }
+
+    function getTempo(){
+        return metronome.tempo
+    }
+
+    function getRhythm(){
+        return metronome.rhythmIndex
+    }
+
 
     title: i18n.tr("Metronome")
     anchors { fill: parent; bottom: parent.bottom; horizontalCenter: parent.horizontalCenter }
@@ -50,10 +65,6 @@ Page {
 
             Item {
                 id: noteIcon
-
-                function updateNoteIcon(img){
-                    icon.iconSource = img;
-                }
 
                 width: units.gu(6); height: units.gu(6)
                 anchors { left: tempoPicker.right; margins: units.gu(1) }

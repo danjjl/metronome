@@ -92,7 +92,6 @@ Item {
     }
 
     anchors { bottom: parent.bottom; horizontalCenter: parent.horizontalCenter }
-    StateSaver.properties: "tempo"
 
     Rhythm {
         id: listRhythms
