@@ -62,7 +62,7 @@ Item {
         }
         // insert main beats
         for (i = 0; i < mainBeat.length; i++) {
-            index = parseInt(pattern.charAt(i))
+            index = parseInt(mainBeat.charAt(i))
             beatPattern[index] = main
         }
         // insert silent beats
