@@ -5,6 +5,8 @@ import Ubuntu.Components.Pickers 1.0
 Page {
     id: mainPage
 
+    property var rhythmPagePointer
+
     function updateRhythm(img, rhythmIndex) {
         icon.iconSource = img;
         metronome.updateRhythm(rhythmIndex)
@@ -75,7 +77,7 @@ Page {
                     anchors.fill: parent
                     color: "#d6d5d6"
                     iconSource: "quarter.svg"
-                    onClicked: pageStack.push(Qt.resolvedUrl("RhythmPage.qml"))
+                    onClicked: pageStack.push(rhythmPagePointer)
                 }
             }
         }

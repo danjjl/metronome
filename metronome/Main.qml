@@ -31,6 +31,8 @@ MainView {
 
         MainPage {
             id: metronomePage
+
+            rhythmPagePointer: rhythmPage
         }
 
         RhythmPage {
